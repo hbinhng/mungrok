@@ -1,0 +1,31 @@
+{
+  "name": "mungrok",
+  "version": "1.0.0",
+  "description": "Run multiple ngrok accounts on one machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beastgmr4620/mungrok.git"
+  },
+  "author": "βεαΣτ <binhmattroi@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/beastgmr4620/mungrok/issues"
+  },
+  "homepage": "https://github.com/beastgmr4620/mungrok#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "ngrok": "^3.3.0",
+    "path": "^0.12.7",
+    "yargs": "^16.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "prettier": "^2.1.2"
+  }
+}
