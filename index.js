@@ -32,7 +32,7 @@ yargs
     .usage('$0 [command] [options/arguments]')
     .command(
         'add <account_name> <auth_token>',
-        '',
+        'Add new account',
         ys => {
             ys.positional('account_name', {
                 describe: 'Ngrok username',
@@ -46,7 +46,7 @@ yargs
     )
     .command(
         'remove <account_name>',
-        '',
+        'Remove account',
         ys => {
             ys.positional('account_name', {
                 describe: 'Ngrok account to be removed',
@@ -55,10 +55,10 @@ yargs
         },
         commands.remove
     )
-    .command('list', '', {}, commands.list)
+    .command('list', 'List existing accounts', {}, commands.list)
     .command(
         'listen [account_name]',
-        '',
+        'Create tunnel',
         ys => {
             ys.positional('account_name', {
                 describe: 'Select specified account to use, leave it to use randomized one',
