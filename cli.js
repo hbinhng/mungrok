@@ -24,6 +24,7 @@ const commands = {
     list: require(path.join(__dirname, 'lib', 'list.command')),
     listen: require(path.join(__dirname, 'lib', 'listen.command')),
     remove: require(path.join(__dirname, 'lib', 'remove.command')),
+    edit: require(path.join(__dirname, 'lib', 'edit.command')),
 };
 
 global.getAllTokens = () => require(path.join(__dirname, 'tokens.json'));
@@ -33,7 +34,7 @@ yargs
     .scriptName('mungrok')
     .usage('$0 [command] [options/arguments]')
     .command(
-        'add <account_name> <auth_token>',
+        ['add <account_name> <auth_token>', 'a'],
         'Add new account',
         ys => {
             ys.positional('account_name', {
@@ -47,7 +48,7 @@ yargs
         commands.add
     )
     .command(
-        'remove <account_name>',
+        ['remove <account_name>', 'rm'],
         'Remove account',
         ys => {
             ys.positional('account_name', {
@@ -57,9 +58,9 @@ yargs
         },
         commands.remove
     )
-    .command('list', 'List existing accounts', {}, commands.list)
+    .command(['list', 'ls'], 'List existing accounts', {}, commands.list)
     .command(
-        'listen [account_name]',
+        ['listen [account_name]', 'l'],
         'Create tunnel',
         ys => {
             ys.positional('account_name', {
@@ -88,6 +89,20 @@ yargs
                 });
         },
         commands.listen
+    )
+    .command(
+        ['edit <account_name> <auth_token>', 'e'],
+        'Edit auth token of existing account',
+        ys => {
+            ys.positional('account_name', {
+                describe: "Saved account's name",
+                type: 'string',
+            }).positional('auth_token', {
+                describe: 'Ngrok auth token',
+                type: 'string',
+            });
+        },
+        commands.edit
     )
     .strict()
     .parse(process.argv.slice(2));
