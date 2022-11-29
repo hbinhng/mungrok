@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beastgmr4620/mungrok.git"
+    "url": "git+https://github.com/hbinhng/mungrok.git"
   },
-  "author": "βεαΣτ <binhmattroi@gmail.com>",
+  "author": "Hai Binh Ng. <binhmattroi@gmail.com>",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/beastgmr4620/mungrok/issues"
+    "url": "https://github.com/hbinhng/mungrok/issues"
   },
-  "homepage": "https://github.com/beastgmr4620/mungrok#readme",
+  "homepage": "https://github.com/hbinhng/mungrok#readme",
   "dependencies": {
     "fs": "0.0.1-security",
     "ngrok": "^4.3.0",
