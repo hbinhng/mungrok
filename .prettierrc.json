@@ -1,11 +1,7 @@
 {
-  "parser": "babel",
-  "printWidth": 120,
-  "tabWidth": 4,
+  "trailingComma": "all",
+  "tabWidth": 2,
   "semi": true,
-  "bracketSpacing": true,
-  "jsxBracketSameLine": true,
   "singleQuote": true,
-  "arrowParens": "avoid",
-  "endOfLine": "lf"
+  "plugins": ["prettier-plugin-organize-imports"]
 }

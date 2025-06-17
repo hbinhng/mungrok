@@ -4,7 +4,9 @@
   "description": "Run multiple ngrok accounts on one machine",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "tsc"
   },
   "bin": {
     "mungrok": "./cli.js"
@@ -19,16 +21,24 @@
     "url": "https://github.com/hbinhng/mungrok/issues"
   },
   "homepage": "https://github.com/hbinhng/mungrok#readme",
+  "engine": {
+    "node": ">=16"
+  },
   "dependencies": {
-    "fs": "0.0.1-security",
-    "ngrok": "^4.3.0",
-    "path": "^0.12.7",
+    "@ngrok/ngrok": "^1.5.1",
     "yargs": "^16.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.11.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "prettier": "^2.1.2"
+    "@types/node": "^24.0.3",
+    "@types/yargs": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.5.2"
   }
 }
